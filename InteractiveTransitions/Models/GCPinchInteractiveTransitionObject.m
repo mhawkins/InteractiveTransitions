@@ -66,6 +66,11 @@
     }
 }
 
+-(UIViewAnimationCurve)completionCurve
+{
+    return UIViewAnimationCurveEaseIn;
+}
+
 -(CGFloat)completionSpeed
 {
     CGFloat speed = (1.0 - self.percentComplete);

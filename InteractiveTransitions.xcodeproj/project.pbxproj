@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C9910F541870B8A00021364E /* GCPinchInteractiveTransitionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9910F531870B8A00021364E /* GCPinchInteractiveTransitionObject.m */; };
+		C9910F581870DF770021364E /* UIViewController+GCInteractiveNavigationHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C9910F571870DF770021364E /* UIViewController+GCInteractiveNavigationHelpers.m */; };
 		C9AEE561185E275F0075888E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AEE560185E275F0075888E /* Foundation.framework */; };
 		C9AEE563185E275F0075888E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AEE562185E275F0075888E /* CoreGraphics.framework */; };
 		C9AEE565185E275F0075888E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AEE564185E275F0075888E /* UIKit.framework */; };
@@ -40,6 +41,8 @@
 /* Begin PBXFileReference section */
 		C9910F521870B8A00021364E /* GCPinchInteractiveTransitionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPinchInteractiveTransitionObject.h; sourceTree = "<group>"; };
 		C9910F531870B8A00021364E /* GCPinchInteractiveTransitionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPinchInteractiveTransitionObject.m; sourceTree = "<group>"; };
+		C9910F561870DF770021364E /* UIViewController+GCInteractiveNavigationHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GCInteractiveNavigationHelpers.h"; sourceTree = "<group>"; };
+		C9910F571870DF770021364E /* UIViewController+GCInteractiveNavigationHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GCInteractiveNavigationHelpers.m"; sourceTree = "<group>"; };
 		C9AEE55D185E275F0075888E /* InteractiveTransitions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveTransitions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AEE560185E275F0075888E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9AEE562185E275F0075888E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C9910F551870DF4A0021364E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C9910F561870DF770021364E /* UIViewController+GCInteractiveNavigationHelpers.h */,
+				C9910F571870DF770021364E /* UIViewController+GCInteractiveNavigationHelpers.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		C9AEE554185E275F0075888E = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +136,7 @@
 		C9AEE566185E275F0075888E /* InteractiveTransitions */ = {
 			isa = PBXGroup;
 			children = (
+				C9910F551870DF4A0021364E /* Categories */,
 				C9AEE59A185E33A00075888E /* Controllers */,
 				C9AEE598185E338B0075888E /* Models */,
 				C9AEE56F185E275F0075888E /* GCAppDelegate.h */,
@@ -293,6 +306,7 @@
 				C9AEE57A185E275F0075888E /* GCDetailViewController.m in Sources */,
 				C9AEE59D185E34ED0075888E /* GCNavigationControllerDelegate.m in Sources */,
 				C9AEE5A0185E35640075888E /* GCControllerAnimatedTransitioningObject.m in Sources */,
+				C9910F581870DF770021364E /* UIViewController+GCInteractiveNavigationHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

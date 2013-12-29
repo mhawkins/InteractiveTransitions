@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GCPinchInteractiveTransitionObject.h"
 
 @interface GCNavigationControllerDelegate : NSObject<UINavigationControllerDelegate>
+
+@property(readonly,nonatomic,strong) GCPinchInteractiveTransitionObject *interactivePinchTransitionObject;
 
 @end

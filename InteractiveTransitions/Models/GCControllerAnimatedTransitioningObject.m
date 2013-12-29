@@ -11,8 +11,8 @@
 
 static const NSString * GCLeftImageKey = @"com.greatcoding.leftimagekey";
 static const NSString * GCRightImageKey = @"com.greatcoding.rightimagekey";
-static const NSTimeInterval FORWARD_ANIMATION_DURATION = 1.4; // 0.8
-static const NSTimeInterval REVERSE_ANIMATION_DURATION = 0.8; // 0.4
+static const NSTimeInterval FORWARD_ANIMATION_DURATION = 1.0;
+static const NSTimeInterval REVERSE_ANIMATION_DURATION = 0.8;
 static const CGFloat SCALE_OUT_PERCENTAGE = 0.95;
 static const CGFloat FADE_OUT_PERCENTAGE = 0.70;
 
@@ -156,13 +156,10 @@ static const CGFloat FADE_OUT_PERCENTAGE = 0.70;
                              
                              if([transitionContext transitionWasCancelled])
                              {
-                                 NSLog(@"Transition cancelled");
                                  [transitionContext completeTransition:NO];
                              }
                              else
                              {
-                                 NSLog(@"Transition completed");
-                                 
                                  // Make our to controller visible
                                  toController.view.alpha = 1.0;
                              

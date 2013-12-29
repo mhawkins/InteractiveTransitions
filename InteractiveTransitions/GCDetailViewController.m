@@ -8,6 +8,8 @@
 
 #import "GCDetailViewController.h"
 #import "GCPinchInteractiveTransitionObject.h"
+#import "GCNavigationControllerDelegate.h"
+#import "UIViewController+GCInteractiveNavigationHelpers.h"
 
 @interface GCDetailViewController ()
 - (void)configureView;
@@ -47,7 +49,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self wireUpTransitionObject];
+    [self gc_wireUpTransitionObject];
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,20 +58,22 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)wireUpTransitionObject
-{
-    id<UIViewControllerAnimatedTransitioning> animatedTransitioning =
-    [self.navigationController.delegate navigationController:self.navigationController
-                             animationControllerForOperation:UINavigationControllerOperationPop
-                                          fromViewController:self
-                                            toViewController:nil];
-    
-    id<UIViewControllerInteractiveTransitioning> interactiveTransitioning =
-    [self.navigationController.delegate navigationController:self.navigationController
-                 interactionControllerForAnimationController:animatedTransitioning];
-    
-    GCPinchInteractiveTransitionObject *pinchTransition = (GCPinchInteractiveTransitionObject *)interactiveTransitioning;
-    [pinchTransition attachToViewController:self];
-}
+//-(void)wireUpTransitionObject
+//{
+////    id<UIViewControllerAnimatedTransitioning> animatedTransitioning =
+////    [self.navigationController.delegate navigationController:self.navigationController
+////                             animationControllerForOperation:UINavigationControllerOperationPop
+////                                          fromViewController:self
+////                                            toViewController:nil];
+////    
+////    id<UIViewControllerInteractiveTransitioning> interactiveTransitioning =
+////    [self.navigationController.delegate navigationController:self.navigationController
+////                 interactionControllerForAnimationController:animatedTransitioning];
+//    GCNavigationControllerDelegate *navControllerDelegate = (GCNavigationControllerDelegate *)self.navigationController.delegate;
+//    
+//    
+//    GCPinchInteractiveTransitionObject *pinchTransition = navControllerDelegate.interactivePinchTransitionObject; //(GCPinchInteractiveTransitionObject *)interactiveTransitioning;
+//    [pinchTransition attachToViewController:self];
+//}
 
 @end

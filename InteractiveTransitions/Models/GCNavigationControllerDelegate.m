@@ -8,7 +8,6 @@
 
 #import "GCNavigationControllerDelegate.h"
 #import "GCControllerAnimatedTransitioningObject.h"
-#import "GCPinchInteractiveTransitionObject.h"
 
 @interface GCNavigationControllerDelegate()
 
@@ -54,7 +53,9 @@
     // Only the detail page can have an interactive transition in this demo
     if(animationController == self.transitioningObject && self.transitioningObject.direction == REVERSE_ANIMATED_DIRECTION)
     {
-        return self.interactivePinchTransitionObject;
+        // Only return if the user started this action via gesture
+        if(self.interactivePinchTransitionObject.userInteraction == YES)
+            return self.interactivePinchTransitionObject;
     }
     
     return nil;
